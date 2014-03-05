@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2216119E185B06AC00C575A9 /* HTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2216119D185B06AC00C575A9 /* HTTPService.m */; };
 		22AB583F185B04A60090B377 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22AB583E185B04A60090B377 /* Foundation.framework */; };
 		22AB5841185B04A60090B377 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22AB5840185B04A60090B377 /* CoreGraphics.framework */; };
 		22AB5843185B04A60090B377 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22AB5842185B04A60090B377 /* UIKit.framework */; };
@@ -23,6 +24,15 @@
 		22AB5866185B04A80090B377 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22AB5842185B04A60090B377 /* UIKit.framework */; };
 		22AB586E185B04A80090B377 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22AB586C185B04A80090B377 /* InfoPlist.strings */; };
 		22AB5870185B04A80090B377 /* FeedRSSAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AB586F185B04A80090B377 /* FeedRSSAppTests.m */; };
+		22E2CA54185B10780032870B /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E2CA53185B10780032870B /* Album.m */; };
+		22E2CA58185B11650032870B /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E2CA57185B11650032870B /* XMLParser.m */; };
+		22E2CA5C185B201F0032870B /* NSString+TrimLeadingSpaces.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E2CA5B185B201F0032870B /* NSString+TrimLeadingSpaces.m */; };
+		22E2CAA7185B448C0032870B /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E2CAA6185B448C0032870B /* ImageCache.m */; };
+		22E2CAA8185B448C0032870B /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E2CAA6185B448C0032870B /* ImageCache.m */; };
+		22E2CAAC185B45470032870B /* AsyncImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E2CAAB185B45470032870B /* AsyncImageDownloader.m */; };
+		22E2CAAD185B45470032870B /* AsyncImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E2CAAB185B45470032870B /* AsyncImageDownloader.m */; };
+		22E2CAAF185B47D00032870B /* default_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E2CAAE185B47D00032870B /* default_icon.png */; };
+		22E2CAB0185B47D00032870B /* default_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E2CAAE185B47D00032870B /* default_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2216119C185B06AC00C575A9 /* HTTPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPService.h; sourceTree = "<group>"; };
+		2216119D185B06AC00C575A9 /* HTTPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPService.m; sourceTree = "<group>"; };
 		22AB583B185B04A60090B377 /* FeedRSSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedRSSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AB583E185B04A60090B377 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		22AB5840185B04A60090B377 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,6 +70,18 @@
 		22AB586B185B04A80090B377 /* FeedRSSAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FeedRSSAppTests-Info.plist"; sourceTree = "<group>"; };
 		22AB586D185B04A80090B377 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		22AB586F185B04A80090B377 /* FeedRSSAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedRSSAppTests.m; sourceTree = "<group>"; };
+		22E2CA50185B0BD40032870B /* HTTPProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPProtocol.h; sourceTree = "<group>"; };
+		22E2CA52185B10780032870B /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		22E2CA53185B10780032870B /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		22E2CA56185B11650032870B /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
+		22E2CA57185B11650032870B /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
+		22E2CA5A185B201F0032870B /* NSString+TrimLeadingSpaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TrimLeadingSpaces.h"; sourceTree = "<group>"; };
+		22E2CA5B185B201F0032870B /* NSString+TrimLeadingSpaces.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TrimLeadingSpaces.m"; sourceTree = "<group>"; };
+		22E2CAA5185B448C0032870B /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
+		22E2CAA6185B448C0032870B /* ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
+		22E2CAAA185B45470032870B /* AsyncImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageDownloader.h; sourceTree = "<group>"; };
+		22E2CAAB185B45470032870B /* AsyncImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageDownloader.m; sourceTree = "<group>"; };
+		22E2CAAE185B47D00032870B /* default_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +111,12 @@
 		22AB5832185B04A50090B377 = {
 			isa = PBXGroup;
 			children = (
+				22E2CAA9185B45320032870B /* AsyncImageDownloader */,
+				22E2CAA4185B447F0032870B /* ImageCache */,
+				22E2CA59185B1F690032870B /* NSString+TrimLeadingSpaces */,
+				22E2CA55185B114A0032870B /* Album */,
+				22E2CA51185B0F380032870B /* XMLParser */,
+				22E2CA4F185B0BAE0032870B /* HTTPService */,
 				22AB5844185B04A70090B377 /* FeedRSSApp */,
 				22AB5869185B04A80090B377 /* FeedRSSAppTests */,
 				22AB583D185B04A60090B377 /* Frameworks */,
@@ -117,6 +147,7 @@
 		22AB5844185B04A70090B377 /* FeedRSSApp */ = {
 			isa = PBXGroup;
 			children = (
+				22E2CAAE185B47D00032870B /* default_icon.png */,
 				22AB584D185B04A70090B377 /* AppDelegate.h */,
 				22AB584E185B04A70090B377 /* AppDelegate.m */,
 				22AB5850185B04A80090B377 /* Main_iPhone.storyboard */,
@@ -158,6 +189,61 @@
 				22AB586C185B04A80090B377 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22E2CA4F185B0BAE0032870B /* HTTPService */ = {
+			isa = PBXGroup;
+			children = (
+				2216119C185B06AC00C575A9 /* HTTPService.h */,
+				2216119D185B06AC00C575A9 /* HTTPService.m */,
+				22E2CA50185B0BD40032870B /* HTTPProtocol.h */,
+			);
+			name = HTTPService;
+			sourceTree = "<group>";
+		};
+		22E2CA51185B0F380032870B /* XMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				22E2CA56185B11650032870B /* XMLParser.h */,
+				22E2CA57185B11650032870B /* XMLParser.m */,
+			);
+			name = XMLParser;
+			sourceTree = "<group>";
+		};
+		22E2CA55185B114A0032870B /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				22E2CA52185B10780032870B /* Album.h */,
+				22E2CA53185B10780032870B /* Album.m */,
+			);
+			name = Album;
+			sourceTree = "<group>";
+		};
+		22E2CA59185B1F690032870B /* NSString+TrimLeadingSpaces */ = {
+			isa = PBXGroup;
+			children = (
+				22E2CA5A185B201F0032870B /* NSString+TrimLeadingSpaces.h */,
+				22E2CA5B185B201F0032870B /* NSString+TrimLeadingSpaces.m */,
+			);
+			name = "NSString+TrimLeadingSpaces";
+			sourceTree = "<group>";
+		};
+		22E2CAA4185B447F0032870B /* ImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				22E2CAA5185B448C0032870B /* ImageCache.h */,
+				22E2CAA6185B448C0032870B /* ImageCache.m */,
+			);
+			name = ImageCache;
+			sourceTree = "<group>";
+		};
+		22E2CAA9185B45320032870B /* AsyncImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				22E2CAAA185B45470032870B /* AsyncImageDownloader.h */,
+				22E2CAAB185B45470032870B /* AsyncImageDownloader.m */,
+			);
+			name = AsyncImageDownloader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +325,7 @@
 				22AB5855185B04A80090B377 /* Main_iPad.storyboard in Resources */,
 				22AB585D185B04A80090B377 /* Images.xcassets in Resources */,
 				22AB5852185B04A80090B377 /* Main_iPhone.storyboard in Resources */,
+				22E2CAAF185B47D00032870B /* default_icon.png in Resources */,
 				22AB5849185B04A70090B377 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E2CAB0185B47D00032870B /* default_icon.png in Resources */,
 				22AB586E185B04A80090B377 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,10 +346,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E2CA58185B11650032870B /* XMLParser.m in Sources */,
+				22E2CA5C185B201F0032870B /* NSString+TrimLeadingSpaces.m in Sources */,
 				22AB584F185B04A70090B377 /* AppDelegate.m in Sources */,
+				2216119E185B06AC00C575A9 /* HTTPService.m in Sources */,
 				22AB5858185B04A80090B377 /* MasterViewController.m in Sources */,
+				22E2CA54185B10780032870B /* Album.m in Sources */,
 				22AB584B185B04A70090B377 /* main.m in Sources */,
+				22E2CAA7185B448C0032870B /* ImageCache.m in Sources */,
 				22AB585B185B04A80090B377 /* DetailViewController.m in Sources */,
+				22E2CAAC185B45470032870B /* AsyncImageDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +363,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E2CAA8185B448C0032870B /* ImageCache.m in Sources */,
+				22E2CAAD185B45470032870B /* AsyncImageDownloader.m in Sources */,
 				22AB5870185B04A80090B377 /* FeedRSSAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +497,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FeedRSSApp/FeedRSSApp-Prefix.pch";
 				INFOPLIST_FILE = "FeedRSSApp/FeedRSSApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -414,6 +511,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FeedRSSApp/FeedRSSApp-Prefix.pch";
 				INFOPLIST_FILE = "FeedRSSApp/FeedRSSApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -480,6 +578,7 @@
 				22AB5875185B04A80090B377 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22AB5876185B04A80090B377 /* Build configuration list for PBXNativeTarget "FeedRSSAppTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +587,7 @@
 				22AB5878185B04A80090B377 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,37 +7,86 @@
 //
 
 #import "DetailViewController.h"
+#import "Album.h"
+#import "ImageCache.h"
+#import "AsyncImageDownloader.h"
 
 @interface DetailViewController ()
+{
+
+}
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pubDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *urlLinkLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *coverArtImageView;
 - (void)configureView;
+- (IBAction)backButtonAction:(id)sender;
 @end
 
 @implementation DetailViewController
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
-{
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
-    }
 
-    if (self.masterPopoverController != nil) {
-        [self.masterPopoverController dismissPopoverAnimated:YES];
-    }        
+- (void)setAlbumObjectForController:(Album *)inAlbumObject {
+    albumObject = inAlbumObject;
+    [self configureView];
 }
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+    if (albumObject) {
+        
+        // Update the user interface for the album details
+        
+        [self.titleLabel setText:[albumObject title]];
+        [self.artistNameLabel setText:[albumObject artist]];
+        //Convert / Format publication date from XML full date format to dd/MM/yyyy
+        [self.pubDateLabel setText:[self convertDateFromFullDateFormat:[albumObject publicationDate]]];
+        [self.urlLinkLabel setText:[albumObject linkURL]];
+        
+        if ([[ImageCache sharedImageCache]doesExist:[albumObject coverArtLink]] == true) {
+            [self.coverArtImageView setImage:[[ImageCache sharedImageCache] getImage:[albumObject coverArtLink]]];
+        }
+        else {
+            [self.coverArtImageView setImage:[UIImage imageNamed:@"default_icon.png"]]; // >>> DEFAULT PNG
+            [[[AsyncImageDownloader alloc] initWithMediaURL:[albumObject coverArtLink] successBlock:^(UIImage *image)  {
+                [self.coverArtImageView setImage:image];
+                [[ImageCache sharedImageCache]addImage:image forURL:[albumObject coverArtLink]];
+                
+            } failBlock:^(NSError *error) {
+                //NSLog(@"Failed to download image due to %@!", error);
+            }] startDownload];
+        }
+    } else {
+        [self.titleLabel setText:@""];
+        [self.artistNameLabel setText:@""];
+        [self.pubDateLabel setText:@""];
+        [self.urlLinkLabel setText:@""];
     }
+}
+
+- (IBAction)backButtonAction:(id)sender {
+     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (NSString *)convertDateFromFullDateFormat:(NSString *)inDate
+{
+    
+    NSString *dayMonthYear = [inDate substringWithRange:NSMakeRange(5, 11)];
+    
+    NSDateFormatter *dateFormatter1 = [[NSDateFormatter alloc] init];
+     [dateFormatter1 setDateFormat:@"dd MMM yyyy"];
+    NSDate *dateFromString = [[NSDate alloc] init];
+    dateFromString = [dateFormatter1 dateFromString:dayMonthYear];
+    
+    
+    NSDateFormatter *dateFormatter2 = [[NSDateFormatter alloc] init];
+    [dateFormatter2 setDateFormat:@"dd/MM/yyyy"];
+    NSString *strDate = [dateFormatter2 stringFromDate:dateFromString];
+    return strDate;
 }
 
 - (void)viewDidLoad

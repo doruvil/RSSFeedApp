@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class Album;
 @interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
+{
+    Album *albumObject;
+}
+//@property (strong, nonatomic) Album *albumObject;
 
-@property (strong, nonatomic) id detailItem;
+- (void)setAlbumObjectForController:(Album *)inAlbumObject;
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end

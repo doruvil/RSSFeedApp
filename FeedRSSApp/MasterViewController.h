@@ -7,11 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HTTPProtocol.h"
+#import "AppDelegate.h"
 
 @class DetailViewController;
+//@protocol HTTPProtocol;
 
-@interface MasterViewController : UITableViewController
 
+@interface MasterViewController : UITableViewController <HTTPProtocol,UITableViewDelegate,UITableViewDataSource>
+{
+    NSMutableArray *arrayOfAlbums;
+    AppDelegate *app;
+    
+}
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
 @end

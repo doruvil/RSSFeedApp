@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "HTTPService.h"
 
 @implementation AppDelegate
+@synthesize httpRequestDelegate;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -18,6 +20,11 @@
         UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
         splitViewController.delegate = (id)navigationController.topViewController;
     }
+    
+    
+    HTTPService *httpObject = [[HTTPService alloc] init];
+    [httpObject executeRequest];
+    
     return YES;
 }
 							

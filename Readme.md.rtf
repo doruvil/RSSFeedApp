@@ -1,0 +1,54 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red19\green87\blue202;\red19\green87\blue202;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14580\viewh14640\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\b\fs32 \cf0 \cb2 Cerinte minime:\'a0
+\b0 dezvoltarea unei aplicatii care descarca si afiseaza continutul feed-ului RSS de la urmatoarea adresa:{\field{\*\fldinst{HYPERLINK "http://itunes.apple.com/WebObjects/MZStore.woa/wpa/MRSS/newreleases/limit=5/rss.xml"}}{\fldrslt \cf3 \ul \ulc3 http://itunes.apple.com/WebObjects/MZStore.woa/wpa/MRSS/newreleases/limit=5/rss.xml}}\
+Aplicatia va afisa lista de 5 cantece, fiecare continand minim urmatoarele date: titlu, artist, data publicarii in format hh:mm dd/MM/yy si o singura imagine covert-art (descarcata si afisata din link).\
+
+\b \
+Cerinte aditionale: 
+\b0 afisarea a mai multor campuri din feed, integrarea unor componente de navigatie, adaptarea ecranului la rezolutii si orientari multiple, afisarea combinata in acelasi ecran a listei de cantece si a detaliilor cantecului, implementare de unit test-uri, asigurarea compatibilitatii cu versiuni diferite ale OS-ului.\
+\
+
+\b Criterii de apreciere:\
+\pard\pardeftab720
+
+\b0 \cf0 - intelegerea si aplicarea paradigmelor standard de codare ale limbajului\
+- utilizarea eficienta a memoriei si a resurselor de procesare\
+- design clar si orientat oop\
+- tratarea erorilor\
+- testarea codului
+\b \
+\
+Termen si abordare:\
+
+\b0 - livrarea implementarii cerintelor minime se va face cat mai repede\
+- cerintele aditionale sunt optionale si livrarea implementarii acestora se va face pana cel tarziu Luni 16.12.2013\
+- in cazul in care vei implementa si unele din cerintele aditionale, iti propun livrarea a doua versiuni, din care prima cat mai repede continand cerintele minime\
+\
+\
+Requirements:\
+\
+The app should be able to show the content of the RSS Feed from the following URL:\
+\pard\pardeftab720
+{\field{\*\fldinst{HYPERLINK "http://itunes.apple.com/WebObjects/MZStore.woa/wpa/MRSS/newreleases/limit=5/rss.xml"}}{\fldrslt \cf4 \cb1 \ul \ulc4 http://itunes.apple.com/WebObjects/MZStore.woa/wpa/MRSS/newreleases/limit=5/rss.xml}}\cf4 \cb1 \ul \ulc4 \
+\
+\cf0 \ulnone The app should show the list of 5 songs, each element should contain the minimum info: title, artist, date as format:\
+hh:mm dd/MM/yy and one single image as the cover-art (downloaded and shown from the link of the song).\
+\
+Further requirements:\
+The app should show more than just one feed (like a table), using navigation elements to show the list and than the content. The screen resolution should not mess the app contents, but also the app should be implemented according to the iOS 7 rules. (Xcode 5 as IDE).\
+\
+Features:\
+- master-detail pattern from iOS\
+- both portrait and landspace orientation supported\
+- getting data from the feed\
+- parsing the XML data\
+- caching mechanism + asynchronous download mechanism for the images\
+\
+}
